@@ -1,10 +1,16 @@
 import express from "express";
 
+const port = process.env.PORT ?? "8000";
+
 const main = () => {
   const app = express();
 
-  app.get("/api/health", (_, res) => {
-    res.status(200).json({ message: "YOU GOT IT" });
+  app.listen(port, () => {
+    console.info(
+      `Server start at http://localhost:${port}\nEnvironment: ${
+        process.env.NODE_ENV ?? "local"
+      }\nTime: ${new Date().toISOString()}`
+    );
   });
 
   return app;
