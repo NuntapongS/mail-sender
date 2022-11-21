@@ -1,8 +1,8 @@
-import { Imail } from "../model/mail";
+import { IMail } from "../model/mail";
 
 class MailController {
   sendMail = async (req: any, res: any) => {
-    const mail: Imail = req.body;
+    const mail: IMail = req.body;
     console.log(mail);
     res.status(200).send("Thank you for getting in touch! ");
   };

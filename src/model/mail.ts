@@ -1,6 +1,7 @@
-export interface Imail {
+export interface IMail {
   from: string;
   to: string;
-  cc?: string;
-  content: string;
+  cc?: string[];
+  subject: string;
+  html?: string;
 }
